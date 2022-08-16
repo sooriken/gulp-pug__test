@@ -1,0 +1,164 @@
+$colorDark:      #252424
+$colorRed:       #DF4826
+$colorOrange:    #FF7431
+$colorLightGray: #F4F4F4
+$colorGray:      #BEBBB9
+$colorFooter:    #7E839C
+
+@mixin flex__jcsb
+    display: flex
+    justify-content: space-between
+
+// header block
+.header
+    background: $colorDark
+    padding: 10px 20px
+    @include flex__jcsb
+
+    &__button
+        margin: auto 0
+
+//content block
+.content
+    &__header
+        background: $colorDark
+        padding: 30px 0 50px
+
+        &-path
+            color: $colorGray
+            font-size: 12px
+            line-height: 1.3
+            font-weight: 700
+
+        &-title
+            margin-top: 10px
+            font-weight: 700
+            font-size: 38px
+            line-height: 1.3
+            color: #fff
+            max-width: 180px
+
+    &__info
+        font-size: 18px
+        line-height: 22px
+        text-align: center
+        font-weight: 700
+        padding: 20px 40px
+        margin: -32px auto 0
+        background: $colorRed
+        color: #fff
+
+        img
+            margin-left: 5px
+            vertical-align: top
+            height: 24px
+            width: auto
+
+    &__cards-inner
+        @include flex__jcsb
+        flex-wrap: wrap
+
+        .card
+            width: calc(50% - 10px)
+            margin-top: 20px
+            background: #fff
+
+            &__image
+                img
+                    width: 100%
+                    height: auto
+
+            &__name
+                height: 120px
+                padding: 20px 10px 30px
+                text-align: center
+                border-bottom: 3px dashed #EFEFEF
+
+            &__price
+                text-align: center
+                font-weight: 700
+                font-size: 18px
+                line-height: 23px
+                color: $colorRed
+                padding: 20px
+
+                img
+                    margin-left: 5px
+                    height: 25px
+                    width: auto
+                    vertical-align: top
+//footer block
+.footer
+    &__nav
+        @include flex__jcsb
+        padding: 0 6px
+
+        &-link
+            flex-grow: 1
+            margin: 0 6px
+            text-align: center
+            padding: 20px 0 14px
+            border-top: 2px solid transparent
+
+            &:hover
+                border-top: 2px solid $colorOrange
+
+                .footer__nav-text
+                    color: $colorDark
+
+            &.active
+                .footer__nav-text
+                    color: $colorDark
+
+            &--qr
+                margin-top: -33px
+
+                .footer__nav-icon
+                    padding: 17px
+                    margin: 0 auto
+                    border-radius: 50%
+                    background: $colorOrange
+                    display: inline-block
+
+                &:hover
+                    border-color: transparent
+        &-icon
+            img
+                width: 24px
+                height: 24px
+                vertical-align: top
+
+        &-text
+            margin-top: 5px
+            font-size: 12px
+            line-height: 17px
+            color: #7E839C
+
+// sidebar block
+.sidebar
+    max-width: 800px
+    margin: 0 auto
+    background: #fff
+    height: 100%
+    display: none
+
+    &__header
+        @include flex__jcsb
+        padding: 10px 20px
+        border-bottom: 1px solid $colorLightGray
+
+        &-button
+            margin: auto 15px auto 0
+
+    &__nav
+        padding: 20px 50px
+
+        &-link
+            font-weight: 700
+            margin-top: 20px
+            font-size: 28px
+            line-height: 1.4
+            color: $colorDark
+
+            &:hover
+                text-decoration: underline

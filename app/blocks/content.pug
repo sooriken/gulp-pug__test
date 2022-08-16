@@ -1,0 +1,16 @@
+include mixin
+
+mixin content
+    .content
+        .content__header
+            .container
+                .content__header-path Главная / Личный кабинет
+                .content__header-title Витрина подарков
+        .container
+            .content__info Твои баллы: 50
+                img(src="images/content/scores-icon.svg")
+            .content__cards-inner
+                +card('card__1', 'Термокружка', '700')
+                +card('card__1', 'Термокружка', '900')
+                +card('card__1', 'Фен-щётка', '1200')
+                +card('card__1', 'Внешний аккумулятор', '1500')

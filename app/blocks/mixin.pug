@@ -1,0 +1,7 @@
+mixin card (cardImage, cardName, cardPrice)
+    .card
+        .card__image
+            img(src=`images/cards/` + cardImage + '.svg')
+        .card__name= cardName
+        .card__price= cardPrice
+            img(src="images/content/scores-icon__red.svg")
