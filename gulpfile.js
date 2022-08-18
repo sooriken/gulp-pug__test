@@ -46,10 +46,7 @@ function images() {
 
 //функция минимизации js скриптов
 function scripts() {
-    return src([
-        'node_modules/jquery/dist/jquery.js',
-        'app/js/main.js'
-    ])
+    return src('app/js/main.js')
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
@@ -89,7 +86,6 @@ function normalize () {
 function build() {
     return src([
         'app/css/style.min.css',
-        'app/*.pug',
         'app/css/normalize.css',
         'app/fonts/**/*',
         'app/js/main.min.js',

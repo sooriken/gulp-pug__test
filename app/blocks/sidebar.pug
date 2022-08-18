@@ -2,7 +2,7 @@ mixin sidebar
     .sidebar__header
         .sidebar__header-logo
             img(src="images/sidebar/sidebar__logo.svg")
-        a.sidebar__header-button(href="#" onclick="document.getElementById('sidebar').style.display='none';document.getElementById('wrapper').style.display='block';")
+        a.sidebar__header-button(href="#" id="sidebarButton")
             img(src="images/sidebar/sidebar__button.svg")
     .sidebar__nav
         a.sidebar__nav-link(href="#") Магазины
